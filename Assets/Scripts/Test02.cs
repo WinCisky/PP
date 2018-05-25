@@ -21,7 +21,6 @@ public class Test02 : MonoBehaviour {
             name = _name;
         }
     }
-
     public class Tile
     {
         public int x, y;
@@ -100,7 +99,7 @@ public class Test02 : MonoBehaviour {
             g_o_list[i++] = Instantiate(g);
             if (setUnactive)
                 g_o_list[i - 1].SetActive(false);
-        }            
+        }
     }
 
     public GameObject GetUnactiveGO(GameObject[] g_o_list)
@@ -336,9 +335,8 @@ public class Test02 : MonoBehaviour {
                 {
                     Debug.Log("here: " + i + " " + j);
                     map[i, j].p_go.transform.position = new Vector3(i, j, -1);
-                }                    
+                }
                 map[i, j].t_go.GetComponent<SpriteRenderer>().sprite = GetTileSprite(map[i, j]);
-
             }
         }
     }
@@ -395,7 +393,7 @@ public class Test02 : MonoBehaviour {
         UpdateShownMap();
 
     }
-	
+
 	// Update is called once per frame
 	void Update () {
         if (Input.GetKeyDown(KeyCode.W))
