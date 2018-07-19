@@ -6,11 +6,11 @@ using UnityEngine.AI;
 public class PlayerController : MonoBehaviour {
 
     public Camera cam;
-    NavMeshAgent agent;
+    public NavMeshAgent agent;
 
     private void Start()
     {
-        agent = GetComponent<NavMeshAgent>();
+        //agent = GetComponent<NavMeshAgent>();
     }
 
     // Update is called once per frame
@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour {
         {
             Ray  ray = cam.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
+            Debug.Log(Physics.Raycast(ray, out hit));
 
             if(Physics.Raycast(ray, out hit))
             {
